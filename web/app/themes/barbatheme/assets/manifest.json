@@ -2,7 +2,8 @@
   "dependencies": {
     "main.js": {
       "files": [
-        "scripts/main.js"
+        "scripts/main.js",
+        "scripts/marquee.js"
       ],
       "main": true
     },
@@ -15,6 +16,11 @@
     "customizer.js": {
       "files": [
         "scripts/customizer.js"
+      ]
+    },
+    "classie.js": {
+      "files": [
+        "scripts/classie.js"
       ]
     },
     "jquery.js": {

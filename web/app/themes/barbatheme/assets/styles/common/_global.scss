@@ -1,1 +1,7 @@
+.container-fluid{
+	//padding: 0 !important;
+	padding: ($spacer*4);
+	@include media-breakpoint-up(sm) {
 
+	}
+}

@@ -14,23 +14,58 @@
 
   // Use this variable to set up the common and page specific functions. If you
   // rename this variable, you will also need to rename the namespace below.
+  'use strict';
+  var showTop = document.getElementById( 'nav-icon' );
+     
   var Sage = {
     // All pages
     'common': {
       init: function() {
-        // JavaScript to be fired on all pages
+
+        // JavaScript to be fired on all pages 
+        $(document).ready(function() {
+            showTop.addEventListener('click', function() {
+                $(this).toggleClass('open');
+                $('#nav-primary-id').toggleClass('push-toright');
+                $('.brand').toggleClass('show');
+                console.log('click menu');
+                });
+            //marquesina
+            $('.move').marquee();
+            
+            });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
+
       }
     },
     // Home page
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
+
+        $(document).ready(function() {
+          $('.fullpage').fullpage({
+            anchors:['musica', 'bio', 'prensa','contacto'],
+            menu: '#menu-menu-1',
+            showActiveTooltip: true,
+            css3: true,
+            navigation: true,
+            //paddingTop: '135px',
+            afterRender: function(){
+            var margin = $('header').outerHeight( true );
+            console.log(-margin);
+            $('.wrap').css('margin-top', -margin); 
+            }
+            });
+
+          });
+
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
+
       }
     },
     // About us page, note the change from about-us to about_us.
