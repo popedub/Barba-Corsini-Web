@@ -1,0 +1,40 @@
+//HOME SHAPE
+.content-shape {
+  max-width: 480px;
+  height: 380px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.forma-gig {
+  clip-path: polygon(5% 30%, 27% 44%, 58% 16%, 96% 34%, 95% 76%, 57% 57%, 27% 86%, 5% 70%);
+  shape-outside: polygon(5% 30%, 27% 44%, 58% 16%, 96% 34%, 95% 76%, 57% 57%, 27% 86%, 5% 70%);
+  background: #000;
+  width: 100%;
+  height: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.date-gig {
+  color: $black;
+  width: 30%;
+  float: left;
+  transform: rotate(25deg);
+}
+
+.place-gig {
+  color: $black;
+  width: 30%;
+  float: left;
+  //margin-top: -40px;
+  transform: rotate(-25deg);
+}
+
+.time-and-more-gig {
+  color: $black;
+  width: 30%;
+  transform: rotate(20deg);
+  float: right;
+}
+

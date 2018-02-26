@@ -68,3 +68,35 @@ add_filter('comments_template', function ($comments_template) {
     );
     return template_path(locate_template(["views/{$comments_template}", $comments_template]) ?: $comments_template);
 });
+
+/**
+ * Customize ACF path
+ */
+add_filter('acf/settings/path', function ( $path ) {
+
+    $path = get_stylesheet_directory() . '/../vendor/advanced-custom-fields/advanced-custom-fields-pro/';
+
+    return $path;
+
+});
+
+/**
+ * Customize ACF dir
+ */
+add_filter('acf/settings/dir', function ( $dir ) {
+
+    $dir = get_stylesheet_directory_uri() . '/../vendor/advanced-custom-fields/advanced-custom-fields-pro/';
+
+    return $dir;
+
+});
+
+/**
+ * Hide ACF field group menu item
+ */
+// add_filter('acf/settings/show_admin', '__return_false');
+
+/**
+ * include ACF
+ */
+include_once( get_stylesheet_directory() . '/../vendor/advanced-custom-fields/advanced-custom-fields-pro/acf.php' );

@@ -1,3 +1,9 @@
+.banner nav {
+  display: flex;
+
+  @extend .justify-content-center;
+}
+
 .banner .nav li {
   @extend .nav-item;
 }
