@@ -12,18 +12,14 @@
   <div class="content-shape">
     <div class="forma-gig"></div>
       <div class="date-gig">
-        {{ __('12.3.18', 'sage') }}
+        <?= $fecha; ?>
       </div>
       <div class="place-gig">
-        {{ __('Sala Becket', 'sage') }}
+        <?= $lugar; ?>
       </div>
       <div class="time-and-more-gig">
-        {{ __('21h +info', 'sage') }}
+        <?= $hora; ?>{{'h.'}}
+        <a href="<?= $mas_info; ?>">+info</a>
       </div>
   </div>
-  @while (have_posts()) @php(the_post())
-    @include('partials.content-'.get_post_type())
-  @endwhile
-
-  {!! get_the_posts_navigation() !!}
 @endsection

@@ -15,9 +15,9 @@
                 "class": "",
                 "id": ""
             },
-            "first_day": 1,
-            "return_format": "d\/m\/Y",
-            "display_format": "d\/m\/Y"
+            "display_format": "d\/m\/Y",
+            "return_format": "d.m.Y",
+            "first_day": 1
         },
         {
             "key": "field_5a94763380b33",
@@ -73,9 +73,9 @@
     "location": [
         [
             {
-                "param": "page",
+                "param": "post_category",
                 "operator": "==",
-                "value": "4"
+                "value": "category:conciertos"
             }
         ]
     ],
@@ -101,5 +101,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1519680484
+    "modified": 1520253357
 }

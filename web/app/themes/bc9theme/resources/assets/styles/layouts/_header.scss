@@ -11,3 +11,14 @@
 .banner .nav a {
   @extend .nav-link;
 }
+
+.brand {
+  text-decoration: none;
+  font-size: 2rem;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+}

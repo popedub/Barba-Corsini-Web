@@ -1,2 +1,23 @@
-body { background-color: whitesmoke; }
+body {
+  background-color: whitesmoke;
+  padding-top: 30px;
+  text-transform: lowercase;
+}
 .container { text-align: center !important; }
+
+.main {
+  @include media-breakpoint-up(lg) {
+    @include make-col(6);
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.page-header {
+  margin-top: 30px;
+
+  h1 {
+    font-size: 1.4rem !important;
+  }
+}

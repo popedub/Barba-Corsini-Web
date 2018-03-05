@@ -100,3 +100,14 @@ add_filter('acf/settings/dir', function ( $dir ) {
  * include ACF
  */
 include_once( get_stylesheet_directory() . '/../vendor/advanced-custom-fields/advanced-custom-fields-pro/acf.php' );
+
+/**
+ * Añado este filtro para llamar a los ACF de los conciertos
+*/
+add_filter ('sage/template/home/data', function (array $data){
+    $data['fecha'] = get_field('fecha');
+    $data['lugar'] = get_field('lugar');
+    $data['hora'] = get_field('hora');
+    $data['mas_info'] = get_field('mas_info');
+    return $data;
+});
