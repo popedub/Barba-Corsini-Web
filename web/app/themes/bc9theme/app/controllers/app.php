@@ -34,4 +34,22 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+    public function anio()
+    {
+        return date('Y');
+    }
+
+    public function links()
+    {
+        $links = [
+            'facebook' => 'https://www.facebook.com/BarbaCorsini/',
+            'twitter' => 'https://twitter.com/BarbaCorsini'
+        ];
+        return $links;
+    }
+    public function mas_info()
+    {
+            return  get_field('mas_info');
+    }
 }

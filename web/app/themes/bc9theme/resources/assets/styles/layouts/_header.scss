@@ -1,5 +1,10 @@
 .banner nav {
   display: flex;
+  margin-top: 15px;
+
+  @include media-breakpoint-up(sm) {
+    margin-top: none;
+  }
 
   @extend .justify-content-center;
 }
@@ -10,11 +15,28 @@
 
 .banner .nav a {
   @extend .nav-link;
+
+  border-bottom: 2px solid transparent;
+  padding: 0.5rem 0 0 0;
+  margin: 0 0.5rem;
+
+  @include media-breakpoint-up(sm) {
+    margin: 0 1rem;
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom: 2px solid;
+  }
 }
 
 .brand {
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.4rem;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 2rem;
+  }
 
   &:hover,
   &:focus,

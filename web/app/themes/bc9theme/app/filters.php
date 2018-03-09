@@ -111,3 +111,4 @@ add_filter ('sage/template/home/data', function (array $data){
     $data['mas_info'] = get_field('mas_info');
     return $data;
 });
+

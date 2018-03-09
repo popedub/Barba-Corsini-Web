@@ -18,8 +18,4 @@ class Home extends Controller
     {
             return get_field('hora');
     }
-    public function mas_info()
-    {
-            return  get_field('mas_info');
-    }
 }
