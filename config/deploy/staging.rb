@@ -2,13 +2,13 @@ set :stage, :staging
 
 # Simple Role Syntax
 # ==================
-#role :app, %w{deploy@example.com}
-#role :web, %w{deploy@example.com}
-#role :db,  %w{deploy@example.com}
+role :app, %w{ivlissco@barbacorsini.net}
+role :web, %w{ivlissco@barbacorsini.net}
+role :db,  %w{ivlissco@barbacorsini.net}
 
 # Extended Server Syntax
 # ======================
-server 'example.com', user: 'deploy', roles: %w{web app db}
+server 'barbacorsini.net', user: 'ivlissco', roles: %w{web app db}
 
 # you can set custom ssh options
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options

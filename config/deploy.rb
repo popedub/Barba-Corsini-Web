@@ -1,5 +1,5 @@
-set :application, 'my_app_name'
-set :repo_url, 'git@example.com:me/my_repo.git'
+set :application, 'bc9theme'
+set :repo_url, 'git@github.com:popedub/Barba-Corsini-Web.git'
 
 # Branch options
 # Prompts for the branch name (defaults to current branch)
@@ -9,7 +9,8 @@ set :repo_url, 'git@example.com:me/my_repo.git'
 # This could be overridden in a stage config file
 set :branch, :master
 
-set :deploy_to, -> { "/srv/www/#{fetch(:application)}" }
+#set :deploy_to, -> { "/home2/ivlissco/public_html/barbacorsini.net/deploy_test/#{fetch(:application
+set :deploy_to, -> { "/home2/ivlissco/public_html/barbacorsini.net/deploy_test/#{user}/" }
 
 # Use :debug for more verbose output when troubleshooting
 set :log_level, :info
@@ -58,4 +59,4 @@ end
 # The above update_option_paths task is not run by default
 # Note that you need to have WP-CLI installed on your server
 # Uncomment the following line to run it on deploys if needed
-# after 'deploy:publishing', 'deploy:update_option_paths'
+after 'deploy:publishing', 'deploy:update_option_paths'
