@@ -1,0 +1,9 @@
+.anio {
+  margin-top: 15px;
+  font-size: 0.75rem;
+  margin-bottom: 15px;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 0.85rem;
+  }
+}

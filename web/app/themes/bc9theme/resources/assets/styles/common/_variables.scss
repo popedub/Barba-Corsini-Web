@@ -1,6 +1,9 @@
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
 
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
 $theme-colors: (
-  primary: #27ae60
+  primary: black
 );

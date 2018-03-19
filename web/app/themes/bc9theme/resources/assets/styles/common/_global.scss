@@ -1,1 +1,45 @@
-body { background-color: antiquewhite; }
+body {
+  background-color: whitesmoke;
+  padding-top: 30px;
+  text-transform: lowercase;
+}
+.container { text-align: center !important; }
+
+.main,
+.social {
+  a {
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+      background-color: black;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    @include make-col(6);
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.current-menu-item {
+  text-decoration: line-through;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.page-header {
+  margin-top: 30px;
+
+  h1 {
+    font-size: 1.4rem !important;
+    background-color: black;
+    display: inline-block;
+    color: black;
+  }
+}
